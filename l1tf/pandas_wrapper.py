@@ -57,7 +57,7 @@ def strip_na(s):
     mask = np.logical_or(lmask, rmask)
     return s[np.logical_not(mask)]
 
-def convert_all(df, delta=3, remove_outliers=False, mad_factor=3):
+def df_l1_tf(df, delta=3, remove_outliers=False, mad_factor=3):
     """
     Applies the l1tf function to the whole dataframe optionally removing outliers
 

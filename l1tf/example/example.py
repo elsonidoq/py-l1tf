@@ -19,8 +19,8 @@ x_w_outliers[outliers] = (np.random.random(outliers.sum()) - 0.5) * 2 + x[outlie
 
 plt.figure()
 plt.suptitle('Different fits by changing the $\delta$ parameter')
-for i, delta in enumerate([1, 3, 10, 30]):
-    plt.subplot(2,2,i+1)
+for i, delta in enumerate([1, 10]):
+    plt.subplot(2,1,i+1)
     filtered = l1tf(x, delta)
     plt.plot(x, label='Original data')
     plt.plot(filtered, linewidth=5, label='Filtered, $\delta$ = %s' % delta, alpha=0.5)
@@ -31,7 +31,7 @@ plt.figure()
 plt.suptitle('Outlier detection algorithm changing the mad_factor parameter')
 
 for i, mad_factor in enumerate([1, 3]):
-    plt.subplot(1,2,i+1)
+    plt.subplot(2,1,i+1)
     x_wo_outliers = remove_outliers(x_w_outliers, delta=1, mad_factor=mad_factor)
     plt.plot(x_w_outliers, label='Original data')
     plt.plot(x_wo_outliers, linewidth=5, label='Without outliers, mad_factor = %s' % mad_factor, alpha=0.5)

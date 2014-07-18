@@ -18,7 +18,7 @@ def get_second_derivative_matrix(n):
     return D
 
 
-def _l1_tf(corr, delta):
+def _l1tf(corr, delta):
     """
         minimize    (1/2) * ||x-corr||_2^2 + delta * sum(y)
         subject to  -y <= D*x <= y

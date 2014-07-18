@@ -1,10 +1,10 @@
 from statsmodels.robust.scale import mad
 from cvxopt import matrix, spmatrix, sin, mul, div, normal, spdiag
 import pandas as pd
-from l1tf import _l1_tf
+from impl import _l1tf
 import numpy as np
 
-def l1_tf(corr, delta):
+def l1tf(corr, delta):
     """
     :param corr: Corrupted signal, should be a numpy array / pandas Series
     :param delta: Strength of regularization

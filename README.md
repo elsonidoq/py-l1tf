@@ -8,3 +8,7 @@ Here are some different fits for a timeseries downloaded from [here](http://www.
 
 ![Different fits by changing the delta parameter](https://raw.githubusercontent.com/elsonidoq/py-l1tf/master/l1tf/example/fits.png)
 
+This can be also very usefull for removing outliers
+
+![Different fits by changing the delta parameter](https://raw.githubusercontent.com/elsonidoq/py-l1tf/master/l1tf/example/outliers.png)
+

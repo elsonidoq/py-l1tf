@@ -6,5 +6,5 @@ The paper describing this technique can be found [here](http://web.stanford.edu/
 
 Here are some different fits for a timeseries downloaded from [here](http://www.barchartmarketdata.com/datasamples/US%20Futures%20Tick%20Query.csv)
 
-![Different fits by changing the delta parameter](File:l1tf/example/fits.png)
+![Different fits by changing the delta parameter](https://raw.githubusercontent.com/elsonidoq/py-l1tf/master/l1tf/example/fits.png)
 

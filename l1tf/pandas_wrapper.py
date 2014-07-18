@@ -25,7 +25,7 @@ def l1tf(corr, delta):
     else:
         raise ValueError("Wrong type for corr")
 
-    values = _l1_tf(values, delta)
+    values = _l1tf(values, delta)
     values = values * (M - m) + m
     return values
 
@@ -35,7 +35,7 @@ def remove_outliers(t, delta, mad_factor=3):
     :param t: an instance of pd.Series
     :param delta: parameter for l1tf function
     """
-    filtered_t = l1_tf(t, delta)
+    filtered_t = l1tf(t, delta)
 
     diff = t.values - np.asarray(filtered_t).squeeze()
     t = t.copy()
@@ -57,7 +57,7 @@ def strip_na(s):
     mask = np.logical_or(lmask, rmask)
     return s[np.logical_not(mask)]
 
-def df_l1_tf(df, delta=3, remove_outliers=False, mad_factor=3):
+def df_l1tf(df, delta=3, remove_outliers=False, mad_factor=3):
     """
     Applies the l1tf function to the whole dataframe optionally removing outliers
 

@@ -27,6 +27,12 @@ def l1tf(corr, delta):
 
     values = _l1tf(values, delta)
     values = values * (M - m) + m
+
+    if isinstance(corr, np.ndarray):
+        values = np.asarray(values).squeeze()
+    elif isinstance(corr, pd.Series):
+        values = pd.Series(values, index=corr.index, name=corr.name)
+
     return values
 
 
@@ -77,9 +83,7 @@ def df_l1tf(df, delta=3, remove_outliers=False, mad_factor=3):
         if remove_outliers:
             t = remove_outliers(t, delta, mad_factor)
             wo_outliers_d[k] = t
-        filtered_t = l1_tf(t, delta)
-
-        s = pd.Series(filtered_t, index=t.index, name=k)
+        s = l1_tf(t, delta)
         l1tf_d[k] = s
 
     if remove_outliers:

@@ -12,8 +12,8 @@ def l1tf(corr, delta):
     :return: The filtered series
     """
 
-    m = int(corr.min())
-    M = int(corr.max())
+    m = float(corr.min())
+    M = float(corr.max())
     denom = M - m
     # if denom == 0, corr is constant
     t = (corr-m) / (1 if denom == 0 else denom)

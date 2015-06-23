@@ -9,7 +9,9 @@ setup(name='l1tf',
       author_email='pablozivic@gmail.com',
       url='pablozivic.com.ar',
       packages=['l1tf'],
-      install_requires=['pandas==0.13.1',
-                'cvxopt==1.1.7']
+      install_requires=[
+                'pandas==0.13.1',
+                'cvxopt==1.1.7',
+                'statsmodels==0.5.0']
 
      )

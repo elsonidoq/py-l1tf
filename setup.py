@@ -10,8 +10,8 @@ setup(name='l1tf',
       url='pablozivic.com.ar',
       packages=['l1tf'],
       install_requires=[
-                'pandas==0.13.1',
-                'cvxopt==1.1.7',
-                'statsmodels==0.5.0']
+                'pandas>=0.13.1',
+                'cvxopt>=1.1.7',
+                'statsmodels>=0.5.0']
 
      )

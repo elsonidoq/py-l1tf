@@ -13,8 +13,8 @@ def get_second_derivative_matrix(n):
     """
     m = n - 2
     D = spmatrix(list(chain(*[[1, -2, 1]] * m)),
-                 list(chain(*[[i] * 3 for i in xrange(m)])),
-                 list(chain(*[[i, i + 1, i + 2] for i in xrange(m)])))
+                 list(chain(*[[i] * 3 for i in range(m)])),
+                 list(chain(*[[i, i + 1, i + 2] for i in range(m)])))
     return D
 
 

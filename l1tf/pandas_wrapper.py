@@ -77,7 +77,7 @@ def df_l1tf(df, delta=3, remove_outliers=False, mad_factor=3):
     ks = df.keys()
 
     for i, k in enumerate(ks):
-        if i % 50 == 0: print i, 'of', len(ks)
+        if i % 50 == 0: print(i, 'of', len(ks))
         t = strip_na(df[k])
 
         if remove_outliers:

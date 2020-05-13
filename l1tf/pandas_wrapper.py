@@ -1,7 +1,7 @@
 #from statsmodels.robust.scale import mad
 from cvxopt import matrix, spmatrix, sin, mul, div, normal, spdiag
 import pandas as pd
-from impl import _l1tf
+from .impl import _l1tf
 import numpy as np
 
 def l1tf(corr, delta):
